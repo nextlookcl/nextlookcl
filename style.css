@@ -6,12 +6,13 @@
 }
 
 body{
-    background:#0a0a0a;
+    background:#050505;
     color:white;
 }
 
+
 header{
-    min-height:100vh;
+    min-height:80vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -20,36 +21,41 @@ header{
     padding:20px;
 }
 
+
 header h1{
     font-size:60px;
-    letter-spacing:8px;
+    letter-spacing:10px;
 }
+
 
 header p{
     font-size:22px;
-    margin:25px 0;
-    color:#cccccc;
+    color:#bdbdbd;
+    margin:20px;
 }
 
-.buttons a{
-    display:inline-block;
-    text-decoration:none;
+
+nav a{
     color:white;
+    text-decoration:none;
     border:1px solid white;
-    padding:14px 30px;
+    padding:14px 28px;
     border-radius:30px;
-    margin:8px;
-    transition:0.3s;
+    margin:10px;
+    display:inline-block;
 }
 
-.buttons a:hover{
+
+nav a:hover{
     background:white;
     color:black;
 }
 
+
 section{
-    padding:70px 8%;
+    padding:60px 8%;
 }
+
 
 h2{
     text-align:center;
@@ -57,52 +63,75 @@ h2{
     margin-bottom:40px;
 }
 
-.productos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+
+.categorias{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:40px;
 }
 
+
+.categorias button{
+    background:#111;
+    color:white;
+    border:1px solid #333;
+    padding:12px 25px;
+    border-radius:30px;
+}
+
+
 .producto{
-    background:#151515;
-    padding:20px;
-    border-radius:18px;
+    max-width:450px;
+    margin:auto;
+    background:#111;
+    padding:25px;
+    border-radius:20px;
     text-align:center;
 }
+
 
 .producto img{
     width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:12px;
+    border-radius:15px;
 }
 
-.producto h3{
-    margin:20px 0 10px;
+
+.producto select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    background:#222;
+    color:white;
+    border:none;
+    border-radius:10px;
 }
 
-.producto p{
-    font-size:22px;
-}
 
 .producto button{
-    margin-top:15px;
-    padding:12px 25px;
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    background:white;
+    color:black;
     border:none;
-    border-radius:25px;
-    cursor:pointer;
+    border-radius:30px;
+    font-size:16px;
 }
 
+
 .info{
-    background:#111;
+    background:#0d0d0d;
     text-align:center;
     line-height:1.8;
-    font-size:18px;
 }
+
 
 footer{
     text-align:center;
     padding:40px;
-    background:#000;
+    background:black;
     color:#aaa;
 }
+
