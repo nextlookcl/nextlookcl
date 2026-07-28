@@ -26,65 +26,105 @@
 
 <h2>Catálogo</h2>
 
+
 <div class="categorias">
-    <button>Zapatillas</button>
-    <button>Polerones</button>
-    <button>Buzos</button>
-    <button>Conjuntos</button>
-    <button>Chaquetas</button>
+<button>Zapatillas</button>
+<button>Polerones</button>
+<button>Buzos</button>
+<button>Conjuntos</button>
+<button>Chaquetas</button>
 </div>
+
+
+<div class="productos">
 
 
 <div class="producto">
 
-<img src="images/jordan4.jpg" alt="Air Jordan 4">
-
+<img src="images/jordan4.jpg">
 
 <h2>Air Jordan 4 Military Black</h2>
 
-
-<label>Color:</label>
-<select id="color">
-    <option>Negro / Blanco</option>
-    <option>Gris / Blanco</option>
-    <option>Otro color</option>
+<label>Color</label>
+<select>
+<option>Negro / Blanco</option>
+<option>Gris / Blanco</option>
 </select>
 
 
-<label>Talla:</label>
-<select id="talla">
-    <option>36</option>
-    <option>37</option>
-    <option>38</option>
-    <option>39</option>
-    <option>40</option>
-    <option>41</option>
-    <option>42</option>
-    <option>43</option>
-    <option>44</option>
-    <option>45</option>
+<label>Talla</label>
+<select>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
 </select>
 
 
-<label>Calidad:</label>
-<select id="calidad" onchange="cambiarPrecio()">
-    <option value="75000">G5</option>
-    <option value="90000">PK</option>
+<label>Calidad</label>
+<select onchange="actualizarPrecio(this)">
+<option value="75000">G5</option>
+<option value="90000">PK</option>
 </select>
 
 
-<h3 id="precio">$75.000</h3>
+<h3 class="precio">$75.000</h3>
 
 
-<button onclick="pedirWhatsapp()">
+<button onclick="pedirWhatsapp('Air Jordan 4 Military Black')">
 💬 Consultar disponibilidad
 </button>
-
 
 </div>
 
 
+
+
+<div class="producto">
+
+<img src="images/retro3.jpg">
+
+<h2>Air Jordan Retro 3</h2>
+
+<label>Color</label>
+<select>
+<option>Blanco / Negro</option>
+<option>Rojo / Negro</option>
+</select>
+
+
+<label>Talla</label>
+<select>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
+</select>
+
+
+<label>Calidad</label>
+<select onchange="actualizarPrecio(this)">
+<option value="75000">G5</option>
+<option value="90000">PK</option>
+</select>
+
+
+<h3 class="precio">$75.000</h3>
+
+
+<button onclick="pedirWhatsapp('Air Jordan Retro 3')">
+💬 Consultar disponibilidad
+</button>
+
+</div>
+
+
+</div>
+
 </section>
+
 
 
 <section class="info">
@@ -92,17 +132,17 @@
 <h2>¿Cómo comprar?</h2>
 
 <p>
-Trabajamos por encargo.
-Consulta disponibilidad antes de confirmar tu pedido.
+Trabajamos por encargo. Consulta disponibilidad antes de confirmar tu pedido.
 </p>
 
 <p>
-✔ Diferentes modelos disponibles<br>
 ✔ Calidad G5 y PK<br>
+✔ Diferentes modelos disponibles<br>
 ✔ Atención personalizada
 </p>
 
 </section>
+
 
 
 <footer>
@@ -118,4 +158,5 @@ Consulta disponibilidad antes de confirmar tu pedido.
 <script src="script.js"></script>
 
 </body>
+
 </html>
