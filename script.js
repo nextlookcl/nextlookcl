@@ -1,33 +1,39 @@
-function cambiarPrecio() {
+function actualizarPrecio(select){
 
-    let calidad = document.getElementById("calidad");
-    let precio = document.getElementById("precio");
+    let producto = select.closest(".producto");
+    let precio = producto.querySelector(".precio");
 
-    let valor = calidad.value;
+    let valor = select.value;
 
     precio.innerHTML = "$" + Number(valor).toLocaleString("es-CL");
 
 }
 
 
-function pedirWhatsapp() {
 
-    let calidad = document.getElementById("calidad");
-    let talla = document.getElementById("talla");
-    let color = document.getElementById("color");
-    let precio = document.getElementById("precio");
+function pedirWhatsapp(nombreProducto){
+
+    let boton = event.target;
+    let producto = boton.closest(".producto");
+
+    let selects = producto.querySelectorAll("select");
+
+    let color = selects[0].value;
+    let talla = selects[1].value;
+    let calidad = selects[2].options[selects[2].selectedIndex].text;
+    let precio = producto.querySelector(".precio").innerText;
 
 
-    let mensaje =
+    let mensaje = 
     "Hola, quiero consultar disponibilidad de:\n\n" +
-    "Producto: Air Jordan 4 Military Black\n" +
-    "Color: " + color.value + "\n" +
-    "Talla: " + talla.value + "\n" +
-    "Calidad: " + calidad.options[calidad.selectedIndex].text + "\n" +
-    "Precio: " + precio.innerText;
+    "Producto: " + nombreProducto + "\n" +
+    "Color: " + color + "\n" +
+    "Talla: " + talla + "\n" +
+    "Calidad: " + calidad + "\n" +
+    "Precio: " + precio;
 
 
-    let whatsapp =
+    let whatsapp = 
     "https://wa.me/56986678393?text=" + encodeURIComponent(mensaje);
 
 
