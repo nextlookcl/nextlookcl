@@ -15,10 +15,10 @@
     <h1>NEXT LOOK</h1>
     <p>Tu próximo look comienza aquí 🖤</p>
 
-    <div class="buttons">
-        <a href="#catalogo">Ver catálogo</a>
+    <nav>
+        <a href="#catalogo">Catálogo</a>
         <a href="https://wa.me/56986678393" target="_blank">WhatsApp</a>
-    </div>
+    </nav>
 </header>
 
 
@@ -26,37 +26,63 @@
 
 <h2>Catálogo</h2>
 
-<div class="productos">
+<div class="categorias">
+    <button>Zapatillas</button>
+    <button>Polerones</button>
+    <button>Buzos</button>
+    <button>Conjuntos</button>
+    <button>Chaquetas</button>
+</div>
+
 
 <div class="producto">
-    <img src="images/producto1.jpg">
-    <h3>Air Jordan Retro 3</h3>
-    <p>$85.000</p>
-    <button>Consultar</button>
+
+<img src="images/jordan4.jpg" alt="Air Jordan 4">
+
+
+<h2>Air Jordan 4 Military Black</h2>
+
+
+<label>Color:</label>
+<select id="color">
+    <option>Negro / Blanco</option>
+    <option>Gris / Blanco</option>
+    <option>Otro color</option>
+</select>
+
+
+<label>Talla:</label>
+<select id="talla">
+    <option>36</option>
+    <option>37</option>
+    <option>38</option>
+    <option>39</option>
+    <option>40</option>
+    <option>41</option>
+    <option>42</option>
+    <option>43</option>
+    <option>44</option>
+    <option>45</option>
+</select>
+
+
+<label>Calidad:</label>
+<select id="calidad" onchange="cambiarPrecio()">
+    <option value="75000">G5</option>
+    <option value="90000">PK</option>
+</select>
+
+
+<h3 id="precio">$75.000</h3>
+
+
+<button onclick="pedirWhatsapp()">
+💬 Consultar disponibilidad
+</button>
+
+
 </div>
 
-<div class="producto">
-    <img src="images/producto2.jpg">
-    <h3>Nike Tech Fleece</h3>
-    <p>$75.000</p>
-    <button>Consultar</button>
-</div>
-
-<div class="producto">
-    <img src="images/producto3.jpg">
-    <h3>Polerón Essentials</h3>
-    <p>$50.000</p>
-    <button>Consultar</button>
-</div>
-
-<div class="producto">
-    <img src="images/producto4.jpg">
-    <h3>Chaquetas & Conjuntos</h3>
-    <p>Consultar precio</p>
-    <button>Consultar</button>
-</div>
-
-</div>
 
 </section>
 
@@ -66,13 +92,14 @@
 <h2>¿Cómo comprar?</h2>
 
 <p>
-Trabajamos por encargo. Elige tu modelo favorito y confirma tu pedido.
+Trabajamos por encargo.
+Consulta disponibilidad antes de confirmar tu pedido.
 </p>
 
 <p>
 ✔ Diferentes modelos disponibles<br>
-✔ Atención personalizada<br>
-✔ Productos seleccionados
+✔ Calidad G5 y PK<br>
+✔ Atención personalizada
 </p>
 
 </section>
@@ -86,6 +113,9 @@ Trabajamos por encargo. Elige tu modelo favorito y confirma tu pedido.
 <p>WhatsApp: +56 9 8667 8393</p>
 
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
